@@ -1,10 +1,8 @@
-import GlobalTheme from './globalTheme';
-
-export const theme = {
+export default {
   breakpoints: [],
   fontSizes: [],
   colors: {
-    red: 'red',
+    reddo: 'red',
   },
   space: [],
   fonts: {},
@@ -15,5 +13,3 @@ export const theme = {
   text: {},
   buttons: {},
 };
-
-export default GlobalTheme;

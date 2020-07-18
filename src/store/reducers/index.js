@@ -1,6 +1,8 @@
 import { increment } from '../actions';
 
-const rootReducer = (state, action) => {
+const initialState = { count: 0 };
+
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case increment().type:
       return {

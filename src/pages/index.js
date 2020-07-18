@@ -1,22 +1,21 @@
 import React from 'react';
 import { Box, Button } from 'rebass/styled-components';
-import GlobalTheme from '../theme';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'gatsby';
+import { increment } from '../store/actions';
 
-export default function Home() {
+const Home = () => {
   const dispatch = useDispatch();
   const count = useSelector(state => state.count);
+
+  const incrementCount = () => dispatch(increment());
+
   return (
-    <GlobalTheme>
-      <Box>
-        <Box bg='red'>Hello world!</Box>
-        <Box>{count}</Box>
-        <Button onClick={() => dispatch({ type: 'INCREMENT' })}>
-          Increment
-        </Button>
-        <Link to='/about'>Go</Link>
-      </Box>
-    </GlobalTheme>
+    <Box>
+      <Box color='reddo'>Hello world!</Box>
+      <Button onClick={incrementCount}>Increment</Button>
+      <Box>{count}</Box>
+    </Box>
   );
-}
+};
+
+export default Home;
