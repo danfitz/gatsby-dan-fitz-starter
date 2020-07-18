@@ -10,7 +10,7 @@ const Home = () => {
   const incrementCount = () => dispatch(increment());
 
   return (
-    <Box mt='1rem'>
+    <Box as='main'>
       <Heading as='h1'>Dan Fitz Client Starter</Heading>
       <Button onClick={incrementCount}>Increment: {count}</Button>
     </Box>
