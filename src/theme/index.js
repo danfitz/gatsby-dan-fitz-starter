@@ -1,4 +1,6 @@
-export default {
+import GlobalTheme from './globalTheme';
+
+export const theme = {
   breakpoints: [],
   fontSizes: [],
   colors: {
@@ -13,3 +15,5 @@ export default {
   text: {},
   buttons: {},
 };
+
+export default GlobalTheme;
