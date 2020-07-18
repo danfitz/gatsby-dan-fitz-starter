@@ -12,6 +12,7 @@ Kick off your client project with this boilerplate containing my favourite tools
 
 - Styled components and rebass for design system
 - Redux for global state management
+- React helmet for SEO in head element
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
