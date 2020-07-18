@@ -2,7 +2,9 @@ export default {
   breakpoints: [],
   fontSizes: [],
   colors: {
-    reddo: 'red',
+    blue: '#000080',
+    white: '#fff',
+    black: '#000',
   },
   space: [],
   fonts: {},
@@ -10,6 +12,16 @@ export default {
   lineHeights: {},
   shadows: {},
   variants: {},
-  text: {},
-  buttons: {},
+  text: {
+    heading: {
+      fontSize: '2rem',
+      color: 'blue',
+    },
+  },
+  buttons: {
+    primary: {
+      color: 'white',
+      bg: 'black',
+    },
+  },
 };
