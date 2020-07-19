@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Heading, Button, Link } from 'rebass/styled-components';
+import { Flex, Heading, Button, Link } from 'rebass/styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment } from '../store/actions';
 import { Link as GatsbyLink } from 'gatsby';
+import { SEO } from '../components';
 
 const FourOhFour = () => {
   const dispatch = useDispatch();
@@ -11,15 +12,20 @@ const FourOhFour = () => {
   const incrementCount = () => dispatch(increment());
 
   return (
-    <Box as='main'>
-      <Heading as='h1' mt='1rem'>
-        Page Not Found
-      </Heading>
-      <Button onClick={incrementCount}>Increment: {count}</Button>
-      <Link as={GatsbyLink} to='/' display='block'>
-        Go Home
-      </Link>
-    </Box>
+    <>
+      <SEO title='404' />
+      <Flex as='main' flexDirection='column' alignItems='center'>
+        <Heading as='h1' my='md'>
+          Page Not Found
+        </Heading>
+        <Link as={GatsbyLink} to='/' display='block' mb='md'>
+          Go Home
+        </Link>
+        <Button p='sm' onClick={incrementCount}>
+          Increment: {count}
+        </Button>
+      </Flex>
+    </>
   );
 };
 

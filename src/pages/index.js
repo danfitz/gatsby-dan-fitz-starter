@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Button } from 'rebass/styled-components';
+import { Flex, Heading, Button } from 'rebass/styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment } from '../store/actions';
 import { SEO } from '../components';
@@ -13,10 +13,14 @@ const Home = () => {
   return (
     <>
       <SEO title='Home' />
-      <Box as='main'>
-        <Heading as='h1'>Dan Fitz Client Starter</Heading>
-        <Button onClick={incrementCount}>Increment: {count}</Button>
-      </Box>
+      <Flex as='main' flexDirection='column' alignItems='center'>
+        <Heading as='h1' my='md'>
+          Dan Fitz Client Starter
+        </Heading>
+        <Button p='sm' onClick={incrementCount}>
+          Increment: {count}
+        </Button>
+      </Flex>
     </>
   );
 };
