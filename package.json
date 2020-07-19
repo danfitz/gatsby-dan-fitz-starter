@@ -1,5 +1,5 @@
 {
-  "name": "Dan Fitz's Gatsby Starter",
+  "name": "gatsby-dan-fitz-starter",
   "private": true,
   "description": "A Gatsby starter with all of my favourite tools pre-configured: redux, rebass, styled-components, and react-helmet",
   "version": "0.1.0",
@@ -16,6 +16,8 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.12",
+    "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-styled-components": "^3.3.10",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
