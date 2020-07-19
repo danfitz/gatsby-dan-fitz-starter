@@ -7,9 +7,20 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    title: "Dan Fitz's Client Starter",
+    description:
+      'A Gatsby starter with all of my favourite tools pre-configured: redux, rebass, styled-components, and react-helmet',
+    author: 'Dan Fitz',
+    keywords: ['keywords', 'go', 'here'],
     siteUrl: 'https://your-site.com',
   },
   plugins: [
+    /**
+     * head metadata
+     * used to add valuable metadata to HTML head
+     * learn more: https://www.gatsbyjs.org/tutorial/seo-and-social-sharing-cards-tutorial/
+     */
+    'gatsby-plugin-react-helmet',
     /**
      * robots.txt
      * tells search engine crawler what can be crawled/indexed (everything by default)
