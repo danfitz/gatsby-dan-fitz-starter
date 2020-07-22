@@ -7,7 +7,9 @@ import { ThemeProvider } from 'styled-components';
 import theme from './src/theme';
 import GlobalStyle from './src/theme/globalStyle';
 
-const wrapWithProviders = ({ element }) => {
+import { Layout } from './src/components';
+
+export const wrapWithProviders = ({ element }) => {
   // Instantiating store in `wrapRootElement` handler ensures:
   //  - there is fresh store for each SSR page
   //  - it will be called only once in browser, when React mounts
@@ -23,4 +25,11 @@ const wrapWithProviders = ({ element }) => {
   );
 };
 
-export default wrapWithProviders;
+export const wrapWithLayout = ({ element, props }) => {
+  const pageTitles = {
+    '/': 'Home',
+  };
+
+  console.log(props);
+  return <Layout pageTitle={pageTitles[props.path] || '404'}>{element}</Layout>;
+};

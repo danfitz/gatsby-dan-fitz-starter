@@ -3,7 +3,6 @@ import { Flex, Heading, Button, Link } from 'rebass/styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment } from '../store/actions';
 import { Link as GatsbyLink } from 'gatsby';
-import { SEO } from '../components';
 
 const FourOhFour = () => {
   const dispatch = useDispatch();
@@ -13,7 +12,6 @@ const FourOhFour = () => {
 
   return (
     <>
-      <SEO title='404' />
       <Flex as='main' flexDirection='column' alignItems='center'>
         <Heading as='h1' my='md'>
           Page Not Found
