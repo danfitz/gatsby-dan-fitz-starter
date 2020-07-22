@@ -31,5 +31,9 @@ export const wrapWithLayout = ({ element, props }) => {
   };
 
   console.log(props);
-  return <Layout pageTitle={pageTitles[props.path] || '404'}>{element}</Layout>;
+  return (
+    <Layout pageTitle={pageTitles[props.location.pathname] || '404'}>
+      {element}
+    </Layout>
+  );
 };
