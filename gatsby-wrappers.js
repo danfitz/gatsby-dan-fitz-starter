@@ -26,14 +26,12 @@ export const wrapWithProviders = ({ element }) => {
 };
 
 export const wrapWithLayout = ({ element, props }) => {
+  const pathname = props.location.pathname.split('/')[1];
   const pageTitles = {
-    '/': 'Home',
+    '': 'Home',
+    about: 'About',
   };
 
   console.log(props);
-  return (
-    <Layout pageTitle={pageTitles[props.location.pathname] || '404'}>
-      {element}
-    </Layout>
-  );
+  return <Layout pageTitle={pageTitles[pathname] || '404'}>{element}</Layout>;
 };
