@@ -1,15 +1,11 @@
 import React from 'react';
 import { string, node } from 'prop-types';
-import { useSiteMetadata } from '../utils/queries';
 import SEO from './seo';
 
-const Layout = ({ pageSlug, children }) => {
-  const siteMetadata = useSiteMetadata();
-  const pageTitle = siteMetadata.pageTitles[pageSlug];
-
+const Layout = ({ pageTitle, children }) => {
   return (
     <>
-      <SEO title={pageTitle || '404'} />
+      <SEO title={pageTitle} />
       <header>Header</header>
       <main>{children}</main>
       <footer>Footer</footer>
@@ -18,8 +14,12 @@ const Layout = ({ pageSlug, children }) => {
 };
 
 Layout.propTypes = {
-  pageSlug: string.isRequired,
+  pageTitle: string.isRequired,
   children: node.isRequired,
+};
+
+Layout.defaultProps = {
+  pageTitle: '404',
 };
 
 export default Layout;
