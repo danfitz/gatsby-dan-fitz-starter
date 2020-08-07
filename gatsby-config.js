@@ -13,6 +13,11 @@ module.exports = {
     author: 'Dan Fitz',
     keywords: ['keywords', 'go', 'here'],
     siteUrl: 'https://your-site.com',
+    // The properties in pageTitles match the filenames in the pages directory
+    pageTitles: {
+      index: 'Home',
+      _404: 'Page Not Found',
+    },
   },
   plugins: [
     /**
