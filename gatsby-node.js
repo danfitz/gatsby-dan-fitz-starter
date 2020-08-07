@@ -8,6 +8,8 @@ const getPageTitle = pagePath => {
   return pageTitle;
 };
 
+// Currently, I am using this to pass custom context to pages
+// Basic boilerplate for this comes from https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#pass-context-to-pages
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
