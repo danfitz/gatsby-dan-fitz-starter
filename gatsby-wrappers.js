@@ -28,7 +28,8 @@ export const wrapWithProviders = ({ element }) => {
 export const wrapWithLayout = ({ element, props }) => {
   const { componentChunkName } = props.pageResources.page;
   const splitName = componentChunkName.split('-');
-  const pageSlug = splitName[splitName.length - 2];
+  let pageSlug = splitName[splitName.length - 2];
+  if (pageSlug === '404') pageSlug = '_404';
 
   return <Layout pageSlug={pageSlug}>{element}</Layout>;
 };

@@ -16,7 +16,7 @@ module.exports = {
     // The properties in pageTitles match the filenames in the pages directory
     pageTitles: {
       index: 'Home',
-      _404: 'Page Not Found',
+      404: 'Page Not Found',
     },
   },
   plugins: [
