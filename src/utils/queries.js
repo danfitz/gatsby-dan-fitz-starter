@@ -13,10 +13,6 @@ export const useSiteMetadata = () => {
             author
             keywords
             siteUrl
-            pageTitles {
-              index
-              _404
-            }
           }
         }
       }
